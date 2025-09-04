@@ -1,4 +1,4 @@
-//除法器模块
+//除法器模块//Version 2.0
 module div_fsm#(
     parameter DATAWIDTH = 8   //设置除数和被除数的位宽都是8位
 )(
