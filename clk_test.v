@@ -7,7 +7,7 @@ input rst_n , // 复位信号
 output reg clk_out // 输出时钟
 );
 //paramater define
-parameter DIV_N = 26'd10 ; //分频
+parameter DIV_N = 26'd100 ; //分频
 //reg define
 reg [25:0] cnt; // 时钟分频计数
 

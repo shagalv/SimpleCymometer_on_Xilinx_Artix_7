@@ -1,0 +1,66 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Sep  6 11:09:43 2025
+| Host         : Dan running 64-bit major release  (build 9200)
+| Command      : report_drc -file hx_oled_top_drc_routed.rpt -pb hx_oled_top_drc_routed.pb -rpx hx_oled_top_drc_routed.rpx
+| Design       : hx_oled_top
+| Device       : xc7a75tfgg484-2
+| Speed File   : -2
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 6
++----------+----------+-------------------+------------+
+| Rule     | Severity | Description       | Violations |
++----------+----------+-------------------+------------+
+| PDRC-153 | Warning  | Gated clock check | 6          |
++----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+PDRC-153#1 Warning
+Gated clock check  
+Net oled_clear/spi_data_reg[7]_i_2_n_0 is a gated clock net sourced by a combinational pin oled_clear/spi_data_reg[7]_i_2/O, cell oled_clear/spi_data_reg[7]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net oled_clear/spi_send_reg_i_2__0_n_0 is a gated clock net sourced by a combinational pin oled_clear/spi_send_reg_i_2__0/O, cell oled_clear/spi_send_reg_i_2__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net oled_write_data/spi_data_reg[7]_i_1_n_0 is a gated clock net sourced by a combinational pin oled_write_data/spi_data_reg[7]_i_1/O, cell oled_write_data/spi_data_reg[7]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net oled_write_data/spi_send_reg_i_2_n_0 is a gated clock net sourced by a combinational pin oled_write_data/spi_send_reg_i_2/O, cell oled_write_data/spi_send_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net spi_send_reg_i_2__1_n_0 is a gated clock net sourced by a combinational pin spi_send_reg_i_2__1/O, cell spi_send_reg_i_2__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net write_start_reg_i_2_n_0 is a gated clock net sourced by a combinational pin write_start_reg_i_2/O, cell write_start_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+

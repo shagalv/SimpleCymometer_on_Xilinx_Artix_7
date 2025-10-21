@@ -1,0 +1,576 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Aug 14 14:59:23 2025
+# Process ID: 34392
+# Current directory: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/synth_1
+# Command line: vivado.exe -log hx75_key_7seg.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hx75_key_7seg.tcl
+# Log file: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/synth_1/hx75_key_7seg.vds
+# Journal file: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/synth_1\vivado.jou
+# Running On: LAB-Workstation, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 12, Host memory: 68414 MB
+#-----------------------------------------------------------
+source hx75_key_7seg.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 472.555 ; gain = 183.348
+Command: read_checkpoint -auto_incremental -incremental E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/utils_1/imports/synth_1/hx75_hex_7seg.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/utils_1/imports/synth_1/hx75_hex_7seg.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top hx75_key_7seg -part xc7a75tfgg484-2
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a75t'
+INFO: [Device 21-403] Loading part xc7a75tfgg484-2
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 40768
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1327.656 ; gain = 441.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'hx75_key_7seg' [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/new/key_7seg.v:4]
+INFO: [Synth 8-6157] synthesizing module 'key44' [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:30]
+INFO: [Synth 8-155] case statement is not full and has no default [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:75]
+WARNING: [Synth 8-567] referenced signal 'key_flag' should be on the sensitivity list [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:71]
+INFO: [Synth 8-6155] done synthesizing module 'key44' (0#1) [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hx75_hex_7seg' [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/new/hx75_hex_7seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'hx75_hex_7seg' (0#1) [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/new/hx75_hex_7seg.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'hx75_key_7seg' (0#1) [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/new/key_7seg.v:4]
+WARNING: [Synth 8-7137] Register key_flag_reg in module key44 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:17]
+WARNING: [Synth 8-7137] Register col_reg_reg in module key44 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:60]
+WARNING: [Synth 8-7137] Register row_reg_reg in module key44 has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:61]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.059 ; gain = 548.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.059 ; gain = 548.402
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1435.059 ; gain = 548.402
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1435.059 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc]
+WARNING: [Vivado 12-584] No ports matched 'key[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:6]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:6]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'key[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'key[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:8]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:8]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'key[4]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'beep'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_miso_DAT0'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_mosi_CMD'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_clk'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_cs_DAT3'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_DAT1'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sd_DAT2'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_RXD'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_TXD'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vn_in'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VSYNC'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_HSYNC'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:69]
+CRITICAL WARNING: [Common 17-161] Invalid option value '//VGA' specified for 'objects'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:70]
+CRITICAL WARNING: [Common 17-161] Invalid option value '//VGA' specified for 'objects'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:71]
+CRITICAL WARNING: [Common 17-161] Invalid option value '//VGA' specified for 'objects'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'VGA_HSYNC'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_VSYNC'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'VGA_D[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_p'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_p_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hpdin'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hpdin'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_n_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_n_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_p_A[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_p_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_p_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hpdin'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hpdin'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_data_n_A[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_n_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'tmds_clk_n_A'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_pclk'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:122]
+CRITICAL WARNING: [Vivado 12-4739] create_clock:No valid object(s) found for '-objects [get_ports cam_pclk]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:122]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+WARNING: [Vivado 12-507] No nets matched 'cam_pclk_IBUF'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_pclk'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_rst_n'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_pwdn'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[4]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[5]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[6]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_data[7]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_vsync'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_href'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_scl'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'cam_sda'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rst_n'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rxc'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rx_ctl'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:145]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:145]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_rxd[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_txc'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_tx_ctl'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:154]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:154]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'eth_txd[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'P1IO[0]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:158]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:158]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'P1IO[1]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'P1IO[2]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'P1IO[3]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:161]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:161]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'P1IO[4]'. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:162]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:162]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:162]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/constrs_1/imports/DSD/hx7A75_port.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/hx75_key_7seg_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/hx75_key_7seg_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1528.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1528.945 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a75tfgg484-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'key44'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                           000001 |                              000
+                  iSTATE |                           000010 |                              001
+                 iSTATE0 |                           000100 |                              010
+                 iSTATE1 |                           001000 |                              011
+                 iSTATE2 |                           010000 |                              100
+                 iSTATE4 |                           100000 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'key44'
+WARNING: [Synth 8-327] inferring latch for variable 'key_value_reg' [E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.srcs/sources_1/imports/sources_1/imports/IDES/key44_scan.v:76]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    6 Bit        Muxes := 7     
+	   6 Input    6 Bit        Muxes := 1     
+	   6 Input    4 Bit        Muxes := 1     
+	  17 Input    4 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 5     
+	  17 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 180 (col length:80)
+BRAMs: 210 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[7] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[6] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[5] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[4] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[3] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[2] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[1] driven by constant 0
+WARNING: [Synth 8-3917] design hx75_key_7seg has port seg_sel[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     2|
+|3     |LUT2 |     4|
+|4     |LUT3 |     3|
+|5     |LUT4 |    15|
+|6     |LUT5 |     8|
+|7     |LUT6 |     5|
+|8     |FDRE |    26|
+|9     |LD   |     4|
+|10    |IBUF |     5|
+|11    |OBUF |    20|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1528.945 ; gain = 548.402
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1528.945 ; gain = 642.289
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1528.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1528.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+Synth Design complete | Checksum: 49abed01
+INFO: [Common 17-83] Releasing license: Synthesis
+32 Infos, 116 Warnings, 104 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1528.945 ; gain = 1052.422
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1528.945 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/synth_1/hx75_key_7seg.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file hx75_key_7seg_utilization_synth.rpt -pb hx75_key_7seg_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Aug 14 15:00:11 2025...

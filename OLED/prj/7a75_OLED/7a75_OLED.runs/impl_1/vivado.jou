@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Sep  6 11:09:16 2025
+# Process ID: 4972
+# Current directory: E:/Mycode/Code_for_FPGA/Code_for_FPGA/SUMMER_COURSE/final_work/rtl/OLED/prj/7a75_OLED/7a75_OLED.runs/impl_1
+# Command line: vivado.exe -log hx_oled_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hx_oled_top.tcl -notrace
+# Log file: E:/Mycode/Code_for_FPGA/Code_for_FPGA/SUMMER_COURSE/final_work/rtl/OLED/prj/7a75_OLED/7a75_OLED.runs/impl_1/hx_oled_top.vdi
+# Journal file: E:/Mycode/Code_for_FPGA/Code_for_FPGA/SUMMER_COURSE/final_work/rtl/OLED/prj/7a75_OLED/7a75_OLED.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source hx_oled_top.tcl -notrace

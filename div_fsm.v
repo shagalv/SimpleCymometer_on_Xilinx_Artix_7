@@ -1,21 +1,23 @@
-//除法器模块//Version 2.0
+//除法器模块
 module div_fsm#(
-    parameter DATAWIDTH = 8   //设置除数和被除数的位宽都是8位
+    parameter DATAWIDTH = 8   //默认设置除数和被除数的位宽都是8位
 )(
 input clk,
 input rst_n,
 input en,                           //除法器使能信号
 input [DATAWIDTH - 1:0] dividend,   //输入 被除数
 input [DATAWIDTH - 1:0] divisor,    //输入 除数
-output ready,
+input renew,                        //刷新测量信号
+
+output ready,                       //空闲状态，可以接收数据
 output [DATAWIDTH - 1:0] quotient,  //输出的 商
 output [DATAWIDTH - 1:0] remainder, //输出的 余数
-output vld_out                      //输出 有效信号
+output vld_out                    //输出 有效信号
 );
 
 //定义状态机状态
 localparam IDLE =   2'b00;
-localparam SUB =    2'b01;
+//localparam SUB =    2'b01;//
 localparam SHIFT =  2'b10;
 localparam DONE =   2'b11;
 
@@ -35,7 +37,7 @@ reg[DATAWIDTH - 1:0] count;//统计移位的位数
 //FSM 状态转移
 always@(posedge clk or negedge rst_n)
 begin
-    if(~rst_n) state <= IDLE;
+    if(~rst_n || renew) state <= IDLE;
     else state <= next_state;
 end
 
@@ -47,14 +49,10 @@ begin
         if(en) next_state = SHIFT;
         else next_state = IDLE;
     end
-    else if(state == SUB) next_state = (count == DATAWIDTH) ? DONE : SHIFT;
     else if(state == SHIFT)
     begin
-        if(divisor_e > dividend_e)
-        begin
-            next_state = SHIFT; //仍然不够除，继续移位
-        end
-        else next_state = SUB;  //divisor_e <= dividend_e 转至减法
+        if(count == DATAWIDTH)  next_state = DONE; //输出
+        else next_state = SHIFT;  //继续移位
     end
     else  next_state =IDLE;//state == DONE，next_state = IDLE
 end
@@ -62,7 +60,7 @@ end
 //根据当前所处的状态，对被除数和除数进行 位操作/减法操作
 always@(posedge clk or negedge rst_n)
 begin
-    if(~rst_n)
+    if(~rst_n || renew)
     begin
         dividend_e <= 1'b0;
         divisor_e <= 1'b0;
@@ -80,19 +78,15 @@ begin
     end
     else if(state == SHIFT)
     begin
-        if(count < DATAWIDTH)
+        if(dividend_e >= divisor_e )
         begin
-            dividend_e <= dividend_e << 1; //被除数 左移1位
+            dividend_e <= dividend_e - divisor_e + 1;
+        end
+        else 
+        begin
+            dividend_e <= dividend_e << 1;
             count <= count + 1;
         end
-        // else if(count == DATAWIDTH)
-        // begin
-        //     dividend_e <= dividend_e - divisor_e + 1;
-        // end
-    end
-    else if(state == SUB)
-    begin
-        dividend_e <= dividend_e - divisor_e + 1;
     end
     else//state == DONE
     begin

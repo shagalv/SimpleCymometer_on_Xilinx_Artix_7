@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Aug 14 15:00:19 2025
+# Process ID: 42868
+# Current directory: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/impl_1
+# Command line: vivado.exe -log hx75_key_7seg.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source hx75_key_7seg.tcl -notrace
+# Log file: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/impl_1/hx75_key_7seg.vdi
+# Journal file: E:/zsq/work/DSD/hx75_key_7seg/hx75_key_7seg.runs/impl_1\vivado.jou
+# Running On: LAB-Workstation, OS: Windows, CPU Frequency: 3504 MHz, CPU Physical cores: 12, Host memory: 68414 MB
+#-----------------------------------------------------------
+source hx75_key_7seg.tcl -notrace

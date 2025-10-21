@@ -1,0 +1,102 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Sep  6 11:09:32 2025
+| Host         : Dan running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file hx_oled_top_control_sets_placed.rpt
+| Design       : hx_oled_top
+| Device       : xc7a75t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    24 |
+|    Minimum number of control sets                        |    24 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    91 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    24 |
+| >= 0 to < 4        |    10 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     3 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               7 |            5 |
+| No           | No                    | Yes                    |               3 |            2 |
+| No           | Yes                   | No                     |              81 |           23 |
+| Yes          | No                    | No                     |              12 |            4 |
+| Yes          | No                    | Yes                    |              85 |           28 |
+| Yes          | Yes                   | No                     |               9 |            3 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------+----------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|               Clock Signal               |                 Enable Signal                |        Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------+----------------------------------------------+--------------------------------+------------------+----------------+--------------+
+|  oled_clear/spi_send_reg_i_2__0_n_0      |                                              | oled_write_data/AR[0]          |                1 |              1 |         1.00 |
+|  oled_write_data/spi_send_reg_i_2_n_0    |                                              | oled_write_data/AR[0]          |                1 |              1 |         1.00 |
+|  spi_send_reg_i_2__1_n_0                 |                                              | oled_write_data/AR[0]          |                1 |              1 |         1.00 |
+| ~sck_reg_BUFG                            |                                              |                                |                1 |              1 |         1.00 |
+| ~sck_reg_BUFG                            | spi_master/count                             |                                |                1 |              1 |         1.00 |
+|  sys_clk_IBUF_BUFG                       | reset_oled_i_2_n_0                           | reset_oled_i_1_n_0             |                1 |              1 |         1.00 |
+|  write_start_reg_i_2_n_0                 |                                              |                                |                1 |              1 |         1.00 |
+|  sck_reg_BUFG                            |                                              |                                |                1 |              2 |         2.00 |
+|  sck_reg_BUFG                            |                                              | oled_write_data/AR[0]          |                2 |              3 |         1.50 |
+|  sys_clk_IBUF_BUFG                       |                                              |                                |                2 |              3 |         1.50 |
+|  sck_reg_BUFG                            | oled_init/E[0]                               | oled_write_data/AR[0]          |                1 |              4 |         4.00 |
+|  sck_reg_BUFG                            | oled_write_data/y_tmp_0                      | oled_write_data/AR[0]          |                1 |              4 |         4.00 |
+|  sck_reg_BUFG                            | spi_master/FSM_onehot_cur_st[3]_i_1_n_0      |                                |                1 |              4 |         4.00 |
+|  sck_reg_BUFG                            | spi_master/count                             | spi_master/count[3]_i_1__0_n_0 |                1 |              4 |         4.00 |
+|  oled_clear/spi_data_reg[7]_i_2_n_0      |                                              | oled_write_data/AR[0]          |                2 |              7 |         3.50 |
+|  sck_reg_BUFG                            | oled_write_data/FSM_onehot_cur_st[6]_i_1_n_0 | oled_write_data/AR[0]          |                1 |              7 |         7.00 |
+| ~sck_reg_BUFG                            | spi_master/reg_data[7]_i_1_n_0               |                                |                2 |              7 |         3.50 |
+|  oled_write_data/spi_data_reg[7]_i_1_n_0 |                                              | oled_write_data/AR[0]          |                2 |              8 |         4.00 |
+|  sck_reg_BUFG                            | oled_clear/x_tmp                             | oled_write_data/AR[0]          |                3 |              8 |         2.67 |
+|  sck_reg_BUFG                            | oled_clear/y_tmp                             | oled_write_data/AR[0]          |                4 |              8 |         2.00 |
+|  sck_reg_BUFG                            | spi_master/FSM_onehot_cur_st_reg[3]_0        | oled_write_data/AR[0]          |                6 |             12 |         2.00 |
+|  sys_clk_IBUF_BUFG                       |                                              | spi_master/sck_reg_0           |                8 |             31 |         3.88 |
+|  sys_clk_IBUF_BUFG                       |                                              | clear                          |                8 |             32 |         4.00 |
+|  sck_reg_BUFG                            | oled_write_data/count[3]_i_1_n_0             | oled_write_data/AR[0]          |               13 |             46 |         3.54 |
++------------------------------------------+----------------------------------------------+--------------------------------+------------------+----------------+--------------+
+
+
